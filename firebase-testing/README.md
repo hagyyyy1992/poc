@@ -1,0 +1,1 @@
+# PoC of `jest` `ts-jest` `rules-unit-testing` 
