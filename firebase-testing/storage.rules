@@ -2,8 +2,8 @@ rules_version = '2';
 service firebase.storage {
   match /b/{bucket}/o {
     match /users/{userId}/{allPaths=**} {
-      allow get: if request.auth.uid == userId;
-      allow create: if request.auth.uid == userId
+      allow get: if request.auth != null && request.auth.uid == userId;
+      allow create: if request.auth != null && request.auth.uid == userId
        && isValidContentType(request.resource)
        && isValidFileExtension(request.resource.name)
        && isValidFileSize(request.resource);
