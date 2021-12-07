@@ -10,7 +10,7 @@
     "start": "npm run shell",
     "deploy": "firebase deploy --only functions",
     "logs": "firebase functions:log",
-    "test": "firebase emulators:exec 'jest --detectOpenHandles'",
+    "test": "firebase emulators:exec 'jest'",
     "test:watch": "firebase emulators:exec 'jest --watchAll --detectOpenHandles'"
   },
   "engines": {
